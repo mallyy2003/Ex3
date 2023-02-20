@@ -1,0 +1,6 @@
+.bg-gradiant
+{
+    height: 90vh;
+    width: 90%;
+    background-image: linear-gradient(rgb(200, 137, 227),rgb(255, 255, 255));
+}

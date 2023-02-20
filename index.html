@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <center><h1><font size=:"10">Welcome</font></h1></center>
+        <title>Exercise 3</title>
+
+        <style>
+            .p{color: rgb(205, 153, 238);}
+        </style>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bg-gradiant" >
+        <script language="javascript">
+            function validate()
+            {
+                flag=1;
+                if(document.myform.id.value=="" || document.myform.pwd.value=="" ||document.myform.pno.value=="" )
+                {
+                    flag=0;
+                }
+                
+                var str=document.myform.pno.value;
+                var x;
+                for(var i=0;i<str.length;i++)
+                {
+                    x=str.substr(i,1);
+                    if(!(x<=9))
+                    {
+                        flag=2;
+                    }
+                }
+                if(flag==1)
+                {
+                    alert("Valid Credentials");
+                }
+                else if(flag==2)
+                {
+                    
+                    alert("Invalid Phone Number");
+                    
+                }
+                else{
+                    alert("Invalid Credentials");
+                }
+            }
+        </script>
+
+        <form name ="myform">
+
+<div align="justify">
+                LOGIN ID&ensp;*&ensp;:<input type="text" name="id" id="id"><br><br>
+                PASSWORD&ensp;*&ensp;:<input type="password" name="pwd" id="pwd"><br><br>
+                PHONE NUMBER&ensp;*&ensp;:<input type="tel" name="pno" id="pno"><br><br>
+
+                DOB  :<input type="date" name="DATE"><br><br>
+
+                GENDER  :<input type="radio" id="m" name="GEN" value="MALE">
+                <label for="m">MALE</label>
+                <input type="radio" id="f" name="GEN" value="FEMALE">
+                <label for="f">FEMALE</label><br><br>
+
+                EMAIL ID  :<input type="email" name="mail"><br><br>
+
+                BIRTH CERTIFICATE :<input type="file" name="bc"><br><br>
+
+                Website URL :<input type="url" name="wurl"><br><br>
+
+                Familiar Programming Languages :<input type="checkbox" id="j" name="lang" value="JAVA">
+                <label for="j">JAVA</label>
+                <input type="checkbox" id="h" name="lang" value="HTML">
+                <label for="h">HTML</label>
+                <input type="checkbox" id="c" name="lang" value="CSS">
+                <label for="c">CSS</label><br><br>
+
+            
+            <div align="justify">
+                <input type="submit" value="SUBMIT" id="submit" onclick="validate()"/>&emsp;&emsp;&emsp;
+                <input type="reset" value="CLEAR">
+            </div>
+        
+        </form><br><br><br>
+        <p>&ensp;&ensp; * - Mandatory </p>
+        </div>
+    </body>
+</html>
